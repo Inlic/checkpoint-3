@@ -41,8 +41,8 @@ export default class List {
     get ItemsTemplate(){
         let template = ""
         this.items.forEach(i => {
-            template += `<li class="list-group-item">${i}<i class="fa fa-trash float-right" aria-hidden="true"></i></li>`
-        })
+            template += `<li class="list-group-item">${i}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i}')"></i></li>`
+        });
         return template
     }
 }

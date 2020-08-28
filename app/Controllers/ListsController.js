@@ -16,4 +16,15 @@ export default class ListsController {
   constructor() {
     _drawLists()
   }
+
+  // List Related Methods
+
+
+  // Item Related Methods
+
+
+  removeItem(id,item){
+    ListsService.removeItem(id,item)
+    _drawLists();
+  }
 }
