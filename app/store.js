@@ -9,7 +9,7 @@ let _state = {
     new List({title: "Birds of the World", items: ["Eat Fish","Swim","Freedom Cry"], color:"#ff7034",})
   ]
 };
-
+ //TODO ADD Savestate and Load State for Local Storage
 class Store {
   /**
    * Provides access to application state data
