@@ -5,6 +5,7 @@ console.log("Controller Check")
 //Private
 function _drawLists(){
   console.log("draw check")
+  STORE.saveState()
   let template = ''
   STORE.State.lists.forEach(l => template += l.Template)
   document.getElementById("tasklists").innerHTML = template

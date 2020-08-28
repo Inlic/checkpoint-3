@@ -9,7 +9,17 @@ let _state = {
     new List({title: "Birds of the World", items: ["Eat Fish","Swim","Freedom Cry"], color:"#ff7034",})
   ]
 };
- //TODO ADD Savestate and Load State for Local Storage
+
+function _loadState(){
+  let data = JSON.parse(localStorage.getItem("lists"))
+  if (data) {
+    data.lists = data.lists.map(l => new List(l))
+    _state = data
+  }
+}
+
+_loadState()
+
 class Store {
   /**
    * Provides access to application state data
@@ -17,6 +27,11 @@ class Store {
   get State() {
     return _state;
   }
+
+  saveState(){
+    localStorage.setItem("lists", JSON.stringify(_state))
+  }
+
 }
 
 const STORE = new Store();
