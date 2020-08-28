@@ -11,4 +11,9 @@ main{
 
 .fa {
   color: red;
+  cursor: pointer;
+}
+
+.card-header .fa{
+  color: white
 }
