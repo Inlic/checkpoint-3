@@ -1,9 +1,7 @@
-import Value from "./Models/Value.js";
+import List from "./Models/List.js";
 
 let _state = {
-  activeValue: new Value({ title: "Value" }),
-  /** @type {Value[]} */
-  values: []
+  lists: []
 };
 
 class Store {
