@@ -12,6 +12,11 @@ createList(newList){
   STORE.State.lists.push(newContent)
 }
 
+removeList(id){
+  let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
+  STORE.State.lists.splice(listIndex, 1)
+}
+
 //Item Related Methods
 
 addItem(newItem, id){

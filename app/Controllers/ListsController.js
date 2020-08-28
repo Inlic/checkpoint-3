@@ -26,7 +26,10 @@ export default class ListsController {
     _drawLists()
   }
 
-
+  removeList(id){
+    ListsService.removeList(id)
+    _drawLists()
+  }
 
   // Item Related Methods
   addItem(event,id){

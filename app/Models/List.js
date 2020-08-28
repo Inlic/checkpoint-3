@@ -17,7 +17,7 @@ export default class List {
         return /*html*/`
         <div class="card col-4 px-0">
                 <div class="card-header text-center text-white d-flex flex-column" style="background-color: ${this.color}">
-                    <i class="fa fa-times align-self-end" aria-hidden="true"></i>
+                    <i class="fa fa-times align-self-end" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i>
                     <h3>${this.title}</h3>
                 </div>
                 <div class="card-body">
