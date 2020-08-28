@@ -18,6 +18,14 @@ export default class ListsController {
   }
 
   // List Related Methods
+  createList(event){
+    event.preventDefault()
+    let form = event.target
+    let newList = { title: form.title.value, color: form.color.value }
+    ListsService.createList(newList)
+    _drawLists()
+  }
+
 
 
   // Item Related Methods

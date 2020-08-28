@@ -9,13 +9,13 @@ export default class List {
     }) {
         this.id = generateId()
         this.title = title
-        this.items = items
+        this.items = items || []
         this.color = color
     }
 
     get Template() {
         return /*html*/`
-        <div class="card col-4 px-0 m-3">
+        <div class="card col-4 px-0">
                 <div class="card-header text-center text-white d-flex flex-column" style="background-color: ${this.color}">
                     <i class="fa fa-trash align-self-end" aria-hidden="true"></i>
                     <h3>${this.title}</h3>
@@ -41,7 +41,7 @@ export default class List {
     get ItemsTemplate(){
         let template = ""
         this.items.forEach(i => {
-            template += `<li class="list-group-item">${i}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i}')"></i></li>`
+            template += `<li class="list-group-item"><input class="form-check-input" type="checkbox">${i}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i}')"></i></li>`
         });
         return template
     }

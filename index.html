@@ -15,15 +15,15 @@
         <h1>TaskMaster</h1>
     </header>
     <main class="container-fluid">
-        <div class="row mt-2 ml-2" id="taskform">
+        <div class="row my-2 ml-2" id="taskform">
             <!-- TODO on submit create form with header color -->
-            <form onsubmit="">
+            <form onsubmit="app.listsController.createList(event)">
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="List name">
+                    <input type="text" class="form-control" id="title" placeholder="List name">
                   </div>
                   <div class="col">
-                    <input type="color" class="form-control">
+                    <input type="color" id="color" class="form-control">
                   </div>
                   <div class="col">
                     <button type="submit" class="form-control btn btn-success">Create</button>
@@ -32,7 +32,7 @@
             </form>
             <!-- NOTE condsider moving to draw model object or keep static -->
         </div>
-        <div class="row" id ="tasklists">
+        <div class="row p-3" id ="tasklists">
             <!-- NOTE start of list template -->
             <!-- <div class="card col-4 m-3">
                 <div class="card-header text-center d-flex flex-column">

@@ -7,7 +7,10 @@ console.log("Service Check")
 class ListsService {
 
 //List Related Methods
-
+createList(newList){
+  let newContent = new List(newList)
+  STORE.State.lists.push(newContent)
+}
 
 //Item Related Methods
 

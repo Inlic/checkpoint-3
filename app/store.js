@@ -6,7 +6,7 @@ let _state = {
   /**@type {List[]} */
   lists: [
     // TODO test list for template
-    new List({title: "Birds of the World", items: ["Eat Fish","Swim","Freedom Cry"], color:"#4169e1",})
+    new List({title: "Birds of the World", items: ["Eat Fish","Swim","Freedom Cry"], color:"#ff7034",})
   ]
 };
 
