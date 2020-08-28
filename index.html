@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -11,20 +11,59 @@
 </head>
 
 <body>
-    <header class ="bg-primary text-center">
+    <header class ="container-fluid bg-primary text-center">
         <h1>TaskMaster</h1>
     </header>
-    <main>
-        <div class="row" id="">
+    <main class="container-fluid">
+        <div class="row mt-2" id="taskform">
+            <!-- TODO on submit create form with header color -->
+            <form onsubmit="">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="List name">
+                  </div>
+                  <div class="col">
+                    <input type="color" class="form-control">
+                  </div>
+                  <div class="col">
+                    <button type="submit" class="form-control bg-success">Create</button>
+                  </div>
+                </div>
+            </form>
+            <!-- NOTE condsider moving to draw model object or keep static -->
         </div>
-        <div class="row" id ="">
-
+        <div class="row" id ="tasklists">
+            <!-- NOTE start of list template -->
+            <div class="card col-4 m-3">
+                <div class="card-header text-center d-flex flex-column">
+                    <i class="fa fa-trash pt-2 align-self-end" aria-hidden="true"></i>
+                    <h3>Ice Cream I Need to Eat</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Pecan <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item">Rocky Road <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
+                        <li class="list-group-item">Bubblemint <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
+                    </ul>
+                    <form onsubmit="">
+                        <div class="form-row">
+                          <div class="col">
+                            <input type="text" class="form-control" placeholder="Add Task...">
+                          </div>
+                          <div class="col">
+                            <button type="submit" class="form-control bg-success">+</button>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- NOTE end of list template -->
         </div>
 
 
 
     </main>
-    <footer class="bg-primary text-center">
+    <footer class="container-fluid bg-primary text-center">
         <h1>Made with Love by Coding Fairies</h1>
     </footer>
 
