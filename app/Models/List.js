@@ -2,7 +2,6 @@ import { generateId } from "../utils.js"
 
 export default class List {
     constructor({
-        id,
         title,
         items,
         color
