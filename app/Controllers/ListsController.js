@@ -21,7 +21,13 @@ export default class ListsController {
 
 
   // Item Related Methods
-
+  addItem(event,id){
+    event.preventDefault()
+    let form = event.target
+    let newItem = form.item.value
+    ListsService.addItem(newItem, id)
+    _drawLists()
+  }
 
   removeItem(id,item){
     ListsService.removeItem(id,item)

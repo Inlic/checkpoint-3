@@ -10,6 +10,12 @@ class ListsService {
 
 
 //Item Related Methods
+
+addItem(newItem, id){
+  let list = STORE.State.lists.find(l => l.id == id)
+  list.items.push(newItem)
+}
+
 removeItem(id, item){
   let list = STORE.State.lists.find(l => l.id == id)
   let itemIndex = list.items.findIndex(i => i == item)
