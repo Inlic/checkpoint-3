@@ -13,32 +13,11 @@ createList(newList){
 }
 
 removeList(id){
-  swal({
-    title: "Delete this list?",
-    text: "Once deleted, you will not be able to recover this list!",
-    icon: "warning",
-    buttons: true,
-    dangerMode:true,
-  })
-  .then((value)=> {
-    if(value){
-      console.log("TOASTER BREAD")
-      let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
-      STORE.State.lists.splice(listIndex, 1)
-      swal("Your list has been deleted!", {
-        icon: "success",
-      });
-    }
-    return
-  });
-  
-  
-  
-  // if(window.confirm("Delete this list?")){
-  //   let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
-  //   STORE.State.lists.splice(listIndex, 1)
-  // }
-  // return
+  if(window.confirm("Delete this list?")){
+    let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
+    STORE.State.lists.splice(listIndex, 1)
+  }
+  return
 }
 
 //Item Related Methods

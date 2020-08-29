@@ -27,7 +27,7 @@ export default class List {
                     <form onsubmit="app.listsController.addItem(event,'${this.id}')">
                         <div class="form-row">
                           <div class="col-11">
-                            <input type="text" class="form-control" id="item" placeholder="Add Task...">
+                            <input type="text" class="form-control" id="${this.id}item" placeholder="Add Task...">
                           </div>
                           <div class="col-1">
                             <button type="submit" class="form-control btn btn-success btn-small">+</button>
