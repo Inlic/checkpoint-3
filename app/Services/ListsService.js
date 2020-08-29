@@ -13,8 +13,32 @@ createList(newList){
 }
 
 removeList(id){
-  let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
-  STORE.State.lists.splice(listIndex, 1)
+  swal({
+    title: "Delete this list?",
+    text: "Once deleted, you will not be able to recover this list!",
+    icon: "warning",
+    buttons: true,
+    dangerMode:true,
+  })
+  .then((value)=> {
+    if(value){
+      console.log("TOASTER BREAD")
+      let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
+      STORE.State.lists.splice(listIndex, 1)
+      swal("Your list has been deleted!", {
+        icon: "success",
+      });
+    }
+    return
+  });
+  
+  
+  
+  // if(window.confirm("Delete this list?")){
+  //   let listIndex = STORE.State.lists.findIndex(l=> l.id == id)
+  //   STORE.State.lists.splice(listIndex, 1)
+  // }
+  // return
 }
 
 //Item Related Methods
@@ -25,9 +49,12 @@ addItem(newItem, id){
 }
 
 removeItem(id, item){
-  let list = STORE.State.lists.find(l => l.id == id)
-  let itemIndex = list.items.findIndex(i => i == item)
-  list.items.splice(itemIndex,1)
+  if(window.confirm("Delete this item?")){
+    let list = STORE.State.lists.find(l => l.id == id)
+    let itemIndex = list.items.findIndex(i => i == item)
+    list.items.splice(itemIndex,1)
+  }
+  return
 }
 
 }
