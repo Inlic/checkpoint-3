@@ -42,6 +42,10 @@ export default class ListsController {
     _drawLists()
   }
 
+  toggleItem(id,item){
+    ListsService.toggleItem(id,item)
+    _drawLists()
+  }
   removeItem(id,item){
     ListsService.removeItem(id,item)
     _drawLists();

@@ -27,7 +27,7 @@ export default class List {
                     <form onsubmit="app.listsController.addItem(event,'${this.id}')">
                         <div class="form-row">
                           <div class="col-11">
-                            <input type="text" class="form-control" id="${this.id}item" placeholder="Add Task...">
+                            <input type="text" class="form-control" id="${this.id}item" placeholder="Add Item...">
                           </div>
                           <div class="col-1">
                             <button type="submit" class="form-control btn btn-success btn-small">+</button>
@@ -41,7 +41,7 @@ export default class List {
     get ItemsTemplate(){
         let template = ""
         this.items.forEach(i => {
-            template += `<li class="list-group-item"><input class="form-check-input" type="checkbox">${i}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i}')"></i></li>`
+            template += `<li class="list-group-item"><input class="form-check-input" type="checkbox" onclick ="app.listsController.toggleItem('${this.id}','${i.item}')" ${i.checked == true ? "checked": ""}>${i.item}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i.item}')"></i></li>`
         });
         return template
     }

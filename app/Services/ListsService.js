@@ -23,14 +23,25 @@ removeList(id){
 //Item Related Methods
 
 addItem(newItem, id){
+  let itemObject = {item: newItem, checked: false}
   let list = STORE.State.lists.find(l => l.id == id)
-  list.items.push(newItem)
+  list.items.push(itemObject)
+}
+
+toggleItem(id,item){
+  let list = STORE.State.lists.find(l => l.id == id)
+  let itemIndex = list.items.findIndex(i => i.item == item)
+  if(list.items[itemIndex].checked){
+     list.items[itemIndex].checked = false
+  } else{
+     list.items[itemIndex].checked = true
+  } 
 }
 
 removeItem(id, item){
   if(window.confirm("Delete this item?")){
     let list = STORE.State.lists.find(l => l.id == id)
-    let itemIndex = list.items.findIndex(i => i == item)
+    let itemIndex = list.items.findIndex(i => i.item == item)
     list.items.splice(itemIndex,1)
   }
   return
