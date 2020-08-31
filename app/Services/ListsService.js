@@ -1,7 +1,6 @@
 import List from "../Models/List.js";
 import STORE from "../store.js";
 
-console.log("Service Check")
 
 //Public
 class ListsService {

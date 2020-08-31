@@ -1,6 +1,5 @@
 import List from "./Models/List.js";
 
-console.log("store check")
 
 let _state = {
   /**@type {List[]} */

@@ -1,6 +1,5 @@
 import { generateId } from "../utils.js"
 
-console.log("Model Check")
 export default class List {
     constructor({
         title,
