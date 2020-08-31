@@ -15,10 +15,10 @@ export default class List {
 
     get Template() {
         return /*html*/`
-        <div class="card col-3 px-0">
+        <div class="card col-3 m-2 px-0">
                 <div class="card-header text-center text-white d-flex flex-column" style="background-color: ${this.color}">
                     <i class="fa fa-times align-self-end" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i>
-                    <h3>${this.title}</h3>
+                    <h2>${this.title}</h2>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -37,7 +37,7 @@ export default class List {
                 </div>
         </div>`
     }
-//TODO checkbox color
+
     get ItemsTemplate(){
         let template = ""
         this.items.forEach(i => {
