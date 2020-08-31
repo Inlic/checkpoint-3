@@ -6,9 +6,9 @@ let _state = {
   /**@type {List[]} */
   lists: [
     // TODO test list for template
-    new List({title: "Birds of the World", items: [{ item:"Eat Fish", checked: false},{item:"Swim",checked: false},{item:"Freedom Cry",checked:false}], color:"#ff7034",}),
-    new List({title: "Stuck in the Middle", items: [{ item:"Eat Fish", checked: false},{item:"Swim",checked: false},{item:"Freedom Cry",checked:false}], color:"#334433",}),
-    new List({title: "Down at the End", items: [{ item:"Eat Fish", checked: false},{item:"Swim",checked: false},{item:"Freedom Cry",checked:false}], color:"#ff2304",})
+    new List({title: "Groceries", items: [{ item:"Bread", checked: false},{item:"Eggs",checked: false},{item:"Milk",checked:false}], color:"#ff7034",}),
+    new List({title: "Chores", items: [{ item:"Take out trash", checked: false},{item:"Clean bathrooms",checked: false},{item:"Do laundry",checked:false}], color:"#08bf11",}),
+    new List({title: "Vacation Plan", items: [{ item:"Book Flight", checked: false},{item:"Hire Guide",checked: false},{item:"Set up restaurant tour",checked:false}], color:"#b134eb",})
   ]
 };
 

@@ -15,7 +15,7 @@ export default class List {
 
     get Template() {
         return /*html*/`
-        <div class="card col-4 px-0">
+        <div class="card col-3 px-0">
                 <div class="card-header text-center text-white d-flex flex-column" style="background-color: ${this.color}">
                     <i class="fa fa-times align-self-end" aria-hidden="true" onclick="app.listsController.removeList('${this.id}')"></i>
                     <h3>${this.title}</h3>
@@ -37,11 +37,11 @@ export default class List {
                 </div>
         </div>`
     }
-
+//TODO checkbox color
     get ItemsTemplate(){
         let template = ""
         this.items.forEach(i => {
-            template += `<li class="list-group-item"><input class="form-check-input" type="checkbox" onclick ="app.listsController.toggleItem('${this.id}','${i.item}')" ${i.checked == true ? "checked": ""}>${i.item}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i.item}')"></i></li>`
+            template += `<li class="list-group-item"><input class="form-check-input" type="checkbox" onclick ="app.listsController.toggleItem('${this.id}','${i.item}')" style="background-color: ${this.color} !important" ${i.checked == true ? "checked": ""}>${i.item}<i class="fa fa-trash float-right" aria-hidden="true" onclick="app.listsController.removeItem('${this.id}','${i.item}')"></i></li>`
         });
         return template
     }

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header class ="container-fluid bg-primary text-center">
+    <header class ="container-fluid bg-primary text-center text-white">
         <h1>TaskMaster</h1>
     </header>
     <main class="container-fluid">
@@ -27,42 +27,18 @@
                     <input type="color" id="color" class="form-control">
                   </div>
                   <div class="col">
-                    <button type="submit" class="form-control btn btn-success">Create</button>
+                    <button type="submit" class="form-control btn btn-success">Create List</button>
                   </div>
                 </div>
             </form>
             <!-- NOTE condsider moving to draw model object or keep static -->
         </div>
-        <div class="row" id="tasklists">
-            <!-- NOTE start of list template -->
-            <!-- <div class="card col-4 m-3">
-                <div class="card-header text-center d-flex flex-column">
-                    <i class="fa fa-trash pt-2 align-self-end" aria-hidden="true"></i>
-                    <h3>Ice Cream I Need to Eat</h3>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Pecan <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
-                        <li class="list-group-item">Rocky Road <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
-                        <li class="list-group-item">Bubblemint <i class="fa fa-trash float-right" aria-hidden="true"></i></li>
-                    </ul>
-                    <form onsubmit="">
-                        <div class="form-row">
-                          <div class="col-11">
-                            <input type="text" class="form-control" placeholder="Add Task...">
-                          </div>
-                          <div class="col-1">
-                            <button type="submit" class="form-control btn btn-success btn-small">+</button>
-                          </div>
-                        </div>
-                    </form>
-                </div>
-            </div> -->
-            <!-- NOTE end of list template -->
+        <div class="row justify-content-around" id="tasklists">
+            
         </div>
     </main>
-    <footer class="container-fluid bg-primary text-center">
-        <h1>Made with Love by Coding Fairies</h1>
+    <footer class="container-fluid bg-primary text-center text-white">
+        <h1>♥ Made with Love by Coding Fairies ♥</h1>
     </footer>
 
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
